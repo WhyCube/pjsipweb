@@ -41,7 +41,7 @@ public class RecordController {
         return JSON.toJSONString(ip_list);
     }
 
-    @PutMapping(value = "/status/{username}/{status}")
+    @PostMapping(value = "/status/{username}/{status}")
     String SetStatus(@PathVariable("username")String username,@PathVariable("status")String status){
 
         int code=0;
@@ -55,6 +55,8 @@ public class RecordController {
         if(res)return JSON.toJSONString("Success");
         return JSON.toJSONString("Failed");
     }
+
+
     @GetMapping(value="/status/{username}")
     String getStatus(@PathVariable("username")String username){
         int code=roleService.lambdaQuery().eq(Role::getName,username).one().getState();
