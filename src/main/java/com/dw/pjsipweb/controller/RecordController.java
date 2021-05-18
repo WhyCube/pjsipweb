@@ -8,6 +8,7 @@ import com.dw.pjsipweb.entity.Role;
 import com.dw.pjsipweb.service.IRoleService;
 import com.dw.pjsipweb.service.impl.RoleServiceImpl;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +26,7 @@ import java.util.stream.Collectors;
  * @author why
  * @since 2021-05-12
  */
+@Api(description="录音模块管理")
 @RestController
 @RequestMapping("/pjsipweb/record")
 public class RecordController {
