@@ -48,5 +48,11 @@ public class Role implements Serializable {
      */
     private Integer state;
 
+    /**
+     * 用户在局域网的地址
+     */
+
+    private String ip;
+
 
 }
